@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: white;
+    font-family: Arial;
+}
+
+.video-box {
+    width: 350px;
+}
+
+.thumbnail, .thumbnail img {
+    width: 100%;
+}
+
+.thumbnail img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.channel-img, .channel-img img {
+    width: 100%;
+}
+
+.channel-img img {
+    border-radius: 20px;
+}
+
+.text h2 {
+    font-size: 1rem;
+}
+
+.text p {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 3px;
+}
+
+.time::before {
+    content: "•";
+    margin: 0 4px;
+}
