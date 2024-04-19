@@ -1,0 +1,27 @@
+@mixin default-config($margin-param, $padding-param) {
+    margin: $margin-param;
+    padding: $padding-param;
+}
+
+@mixin div-size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin div-style ($bgColor: #d43aff) {
+    background-color: $bgColor;
+}
+
+@mixin flex-config ($direction, $justify, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align-items;
+}
+
+@mixin relative-center() {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
