@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #91a3ad;
+  font-family: "Segoe UI", Verdana, sans-serif;
+}
+
+main {
+  width: 60%;
+  height: auto;
+  background: none;
+  margin: 0 auto;
+  padding: 6vh 0;
+}
+main h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 180px;
+  position: relative;
+}
+main h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  width: 120px;
+  height: 4px;
+  background-color: #ed145b;
+}
+main form {
+  margin: 40px 0;
+}
+main form input {
+  background: none;
+  border: 1px solid #616d72;
+  text-transform: uppercase;
+  width: 250px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #91a3ad;
+}
+main form input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+main form input::-moz-placeholder {
+  font-weight: bold;
+}
+main form input::placeholder {
+  font-weight: bold;
+}
+main section.noticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main section.noticias article.noticia {
+  width: 45%;
+  height: auto;
+  background: none;
+  min-width: 320px;
+  padding: 45px 0;
+}
+main section.noticias article.noticia h2 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+main section.noticias article.noticia p.data {
+  color: #616d72;
+  font-weight: bold;
+  margin: 25px 0 50px 0;
+  position: relative;
+}
+main section.noticias article.noticia p.data::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  width: 70px;
+  height: 4px;
+  background-color: #ed145b;
+}
+main section.noticias article.noticia p.conteudo {
+  margin-bottom: 40px;
+}
+main section.noticias article.noticia a.btn {
+  text-decoration: none;
+  color: #ed145b;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #ed145b;
+  padding: 15px 20px;
+}
+main section.noticias article.noticia a.btn-2 {
+  text-decoration: none;
+  color: #91a3ad;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid #91a3ad;
+  padding: 5px 20px;
+}/*# sourceMappingURL=style.css.map */

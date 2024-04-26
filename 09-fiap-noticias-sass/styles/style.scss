@@ -1,0 +1,120 @@
+@use "mixins";
+@use "variables";
+
+* {
+    @include mixins.zero-config();
+}
+
+body {
+    background-color: variables.$dark-color;
+    color: variables.$light-color;
+    font-family: variables.$font-family;
+}
+
+main {
+    @include mixins.div-config(60%, auto, none);
+    @include mixins.div-center();
+    padding: 6vh 0;
+
+    h1 {
+        @include mixins.title-config(50px, uppercase);
+        margin-bottom: 180px;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            width: 120px;
+            height: 4px;
+            background-color: variables.$magenta-color;
+        }
+    }
+
+    form {
+        margin: 40px 0;
+
+        input {
+            @include mixins.input-config(
+                none,
+                1px solid variables.$gray-color,
+                uppercase,
+                250px,
+                50px,
+                20px,
+                14px,
+                normal,
+                variables.$light-color
+            );
+
+            &:focus {
+                box-shadow: 0 0 0 0;
+                outline: 0;
+            }
+
+            &::placeholder {
+                font-weight: bold;
+            }
+        }
+    }
+
+    section.noticias {
+        @include mixins.flex-init(space-between);
+
+        article.noticia {
+            @include mixins.div-config(45%, auto, none);
+            min-width: 320px;
+            padding: 45px 0;
+
+            h2 {
+                @include mixins.title-config(23px, uppercase);
+            }
+
+            p.data {
+                color: variables.$gray-color;
+                font-weight: bold;
+                margin: 25px 0 50px 0;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -20px;
+                    width: 70px;
+                    height: 4px;
+                    background-color: variables.$magenta-color;
+                }
+            }
+
+            p.conteudo {
+                margin-bottom: 40px;
+            }
+
+            a.btn {
+                @include mixins.button(
+                    none,
+                    variables.$magenta-color,
+                    uppercase,
+                    bold,
+                    14px,
+                    1px solid variables.$magenta-color,
+                    15px 20px
+                )
+            }
+
+            a.btn-2 {
+                @include mixins.button(
+                    none,
+                    variables.$light-color,
+                    uppercase,
+                    bold,
+                    10px,
+                    1px solid variables.$light-color,
+                    5px 20px
+                )
+            }
+        }
+    }
+}

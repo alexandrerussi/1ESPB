@@ -1,0 +1,47 @@
+@mixin zero-config {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin div-config($width, $height, $bg) {
+    width: $width;
+    height: $height;
+    background: $bg;
+}
+
+@mixin div-center {
+    margin: 0 auto;
+}
+
+@mixin title-config($ft-size, $txt-transf) {
+    font-size: $ft-size;
+    text-transform: $txt-transf;
+}
+
+@mixin input-config($bg, $border, $txt-transf, $w, $h, $pd-left, $ft-sz, $ft-weight, $color) {
+    background: $bg;
+    border: $border;
+    text-transform: $txt-transf;
+    width: $w;
+    height: $h;
+    padding-left: $pd-left;
+    font-size: $ft-sz;
+    font-weight: $ft-weight;
+    color: $color;
+}
+
+@mixin flex-init($jc, $wr: wrap) {
+    display: flex;
+    flex-wrap: $wr;
+    justify-content: $jc;
+}
+
+@mixin button($txt-dec, $color, $txt-transfm, $ft-weight, $ft-sz, $border, $pad) {
+    text-decoration: $txt-dec;
+    color: $color;
+    text-transform: $txt-transfm;
+    font-weight: $ft-weight;
+    font-size: $ft-sz;
+    border: $border;
+    padding: $pad;
+}
