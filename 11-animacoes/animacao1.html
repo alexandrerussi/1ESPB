@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrdução a Animação</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            margin: 100px;
+            background-color: red;
+
+            animation-name: animaPulsar;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes animaPulsar {
+            0%,
+            100% {
+                background-color: blue;
+                transform: scaleX(1);
+            }
+
+            50% { 
+                background-color: red;
+                transform: scaleX(2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+
+</body>
+
+</html>

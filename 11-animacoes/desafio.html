@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação Desafio</title>
+
+
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            background-color: blue;
+            animation-name: moverEColorir;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes moverEColorir {
+            0% {
+                left: 0;
+                background-color: blue;
+            }
+
+            50% {
+                left: 50%;
+                background-color: green;
+            }
+
+            100% {
+                left: 100%;
+                background-color: rebeccapurple;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+
+</body>
+
+</html>
