@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeJS</title>
+
+    <style>
+        .box, .box-circle, .box-rotate {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            background-color: tomato;
+        }
+
+        .box-circle {
+            position: relative;
+        }
+
+        .box-rotate, input {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="text">Olá mundo</p>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <p class="bateria">{"charged": "0%", "cycles": 120}</p>
+
+    <div class="box-circle"></div>
+
+    <div class="box-rotate"></div>
+
+    <input type="text" value="0">
+
+    <!-- SCRIPT QUE IMPORTA O ANIME.JS -->
+    <script src="anime.min.js"></script>
+
+    <!-- SCRIPT DA ANIMAÇÃO UTILIZANDO ANIME -->
+    <script>
+        anime({
+            targets: '.text',
+            translateX: 250
+        });
+
+        let boxElements = document.querySelectorAll(".box");
+
+        anime({
+            targets: boxElements,
+            translateX: 270
+        });
+
+        let pBateria = document.querySelector(".bateria");
+
+        let statusBateria = {
+            charged: '0%',
+            cycles: 120
+        }
+
+        anime({
+            targets: statusBateria,
+            charged: '100%',
+            cycles: 200,
+            round: 1,
+            easing: 'linear',
+            update: function () {
+                pBateria.innerHTML = JSON.stringify(statusBateria);
+            }
+        });
+
+        anime({
+            targets: '.box-circle',
+            left: '240px',
+            backgroundColor: '#f00',
+            borderRadius: ['0%', '50%'],
+            easing: 'easeInOutQuad'
+        });
+
+        anime({
+            targets: '.box-rotate',
+            translateX: 250,
+            scale: 2,
+            rotate: '1turn'
+        });
+
+        anime({
+            targets: 'input',
+            value: [0, 1000],
+            round: 1,
+            easing: 'easeInOutExpo'
+        })
+    </script>
+</body>
+
+</html>
